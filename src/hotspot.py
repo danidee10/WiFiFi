@@ -12,13 +12,13 @@ class Hotspot:
     def initialize_hotspot(self):
         """set the hostednetwork mode to allow and also the network name and password"""
         try:
-            subprocess.check_call(self._initialize_cmd, shell=True)
+            subprocess.check_call(self._initialize_cmd, shell=False)
         except subprocess.CalledProcessError as e:
             print("There was an issue starting the hotspot the wifi might be turned off from the hardware switch\nOr your network card is not compatible")
 
     def start(self):
         try:
-            subprocess.check_call(self._start_cmd, shell=True)
+            subprocess.check_call(self._start_cmd, shell=False)
             print("------------------------------------------")
             print("HOTSPOT successfully started")
         except subprocess.CalledProcessError as e:
@@ -26,7 +26,7 @@ class Hotspot:
 
     def stop(self):
         try:
-            subprocess.check_call(self._stop_cmd, shell=True)
+            subprocess.check_call(self._stop_cmd, shell=False)
             print("------------------------------------------")
             print("HOTSPOT has been stopped")
         except subprocess.CalledProcessError as e:
