@@ -3,7 +3,7 @@ WiFiFi is an interactive python program to turn your Windows PC (Win 7, Win 8, W
 
 *Windows 10 has GUI Support for Hotspot mode, but you can still use WiFiFi*
 
-Internally, WiFiFi uses windows Network shell (Netsh).
+Internally, WiFiFi uses [Windows Network shell (Netsh)](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts).
 
 ##
 You can start WiFiFi with
